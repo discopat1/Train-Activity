@@ -1,5 +1,12 @@
+body {
+    background-color: #b96823; 
+}
+.panel-default>.panel-heading {
+    background-color: #c5f1d2; 
+}
 .jumbotron {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #6b6fd0; 
+    background-color: #c5f1d2; 
 };
+
