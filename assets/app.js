@@ -83,8 +83,10 @@ var tMinutesTillTrain = frequencyInput - tRemainder;
 console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
 // Next Train
-var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
+var catchTrain = moment().add(tMinutesTillTrain, "minutes");
+console.log("ARRIVAL TIME: " + moment(catchTrain).format("hh:mm"));
+var nextTrain = moment(catchTrain).format("HH:mm");
 
 // Create the new rows
 var newRow = $("<tr>").append(
