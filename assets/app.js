@@ -20,6 +20,13 @@ $('#submit-info').on('click', function(event) {
     var destinationInput = $('#train-dest').val().trim();
     var timeInput = $('#train-time').val().trim();
     var frequencyInput = $('#frequency').val().trim();
+    
+    
+        if (trainNameInput === "") {
+            alert ("Input valid data!");
+            return;
+        }
+    
 
 // create object for new info
     var newTrain = {
@@ -39,10 +46,12 @@ console.log("OBJECT FREQ: " + newTrain.frequency);
 
 alert("New train added");
 
-$("#train-name").val("");
-  $("#train-dest").val("");
-  $("#train-time").val("");
-  $("#frequency").val("");
+    $("#train-name").val("");
+    $("#train-dest").val("");
+    $("#train-time").val("");
+    $("#frequency").val("");
+
+
 });
 
 // Add info to the train table using firebase
